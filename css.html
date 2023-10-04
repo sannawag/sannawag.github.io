@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS</title>
+<link href="personal website.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="research">
+<div class = "content_wrapper">
+
+<div>
+<h1> Concatenative Sound Synthesis </h1>
+
+<p> Sanna Wager (Ph.D. student, Indiana University SoIC), Liang Chen (Ph.D. candidate, Indiana University SoIC), Minje Kim (Indiana University SoIC), Christopher Raphael (Indiana University SoIC)</p>
+
+<h2> Overview </h2> 
+
+<p> 
+This research aims to translate an expressive gesture performed on one musical instrument to another. The goal is to
+match the target instrument's gestures as closely as possible while preserving the natural characteristics of the source
+instrument. The synthesis is generated from a sequence of audio samples from a database of performances on the source instrument.
+Applications of this method include information retrieval using audio queries, source separation by humming/singing, 
+and humming-to-instrument synthesis.  
+
+</p>
+<p>
+<a href="images/css_article.pdf" > Here</a> is the ICASSP 2017 paper.
+
+</p>
+
+
+<h2> Violin-to-bassoon synthesis </h2>
+<p>
+A violin performance is synthesized on the bassoon with the goal of
+matching the violin's musical gestures. 
+The example below demonstrates the synthesis program applied to the opening of the 
+<a href="https://itunes.apple.com/us/album/absolute-sibelius-violin-concerto/id328298349"> Sibelius violin concerto</a>.
+The bassoon database was generated using recordings by a professional bassoonist (many thanks to Professor Kathleen McLean, professor of bassoon
+at the Indiana University Jacobs School of Music). For comparison, recordings are added of the 
+same bassoonist performing the Sibelius excerpt, imitating the violin's expressive gestures, and of a Garage Band synthesis of the same melody. </p>
+<h3> Target violin performance </h3>
+<audio controls>
+	<source src = "images/sibelius_target.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+<h3> Synthesized bassoon </h3>
+<audio controls>
+	<source src = "images/sibelius_synthesis_normalized.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+<h3> Bassoon imitation of violin performance </h3>
+<audio controls>
+	<source src = "images/sibelius_bassoon_normalized.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+<h3> Garage Band synthesis of bassoon performance </h3>
+<audio controls>
+	<source src = "images/sibelius_garage_band_aligned_normalized.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+<!--
+<p> For evaluation of the results, all recordings were temporally aligned 
+using <a href="http://colinraffel.com/publications/icassp2016optimizing.pdf" > dynamic time warping </a> and
+ <a href="http://forum.audacityteam.org/viewtopic.php?f=42&t=89293&sid=8cb83b3154a498c35093da5beafa0795"> normalized </a>
+to have the same average loudness and all silent sections were removed. Additionally, a recording of the same excerpt was 
+generated on <a href = "http://www.apple.com/mac/garageband/" > GarageBand's</a> synthesized bassoon.</p>
+
+<h3> Synthesized bassoon, time-aligned </h3>
+<audio controls>
+	<source src = "images/sibelius_synthesis_aligned.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+<h3> Bassoon imitation of violin performance, time-aligned </h3>
+<audio controls>
+	<source src = "images/sibelius_bassoon_aligned.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+<h3> GarageBand synthesis, time-aligned </h3>
+<audio controls>
+	<source src = "images/sibelius_garage_band_aligned_normalized.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+
+-->
+
+</div>
+</body>
+</html>
+

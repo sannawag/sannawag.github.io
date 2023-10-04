@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* CSS Document */
+
+	<!-- segoe UI -->
+
+background: #fcfff4; /* Old browsers */
+background: -moz-linear-gradient(top,  #fcfff4 0%, #e9e9ce 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfff4), color-stop(100%,#e9e9ce)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #fcfff4 0%,#e9e9ce 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #fcfff4 0%,#e9e9ce 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #fcfff4 0%,#e9e9ce 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #fcfff4 0%,#e9e9ce 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#e9e9ce',GradientType=0 ); /* IE6-9 */
+
+body {
+	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+	color: #000000;
+	font-size: 15;
+	padding: 9;
+	text-align: justify;
+    text-justify: inter-word;
+}
+
+table {
+	border: 1px solid black;
+}
+
+tr, th, td {
+	border: 1px solid black;	
+}
+
+
+table.res_table{border-collapse:collapse;}
+
+.content_wrapper {
+	background-color: transparent;
+	width: 989px;
+	margin: 0px auto 0px auto;
+	height: auto;
+}
+
+div {
+	background-color: transparent;
+	display: block;
+	text-align: justify;
+}
+
+.title, .subtitle, .contact {
+	float: none;
+	display: block;
+	color: black;
+	text-align: center;
+	vertical-align: top;
+}
+
+.title {
+	font-size: 48px;
+	padding: 5% 0;
+
+}
+
+.subtitle {
+	font-size: 25px;
+	padding: 0;
+}
+
+#profilepic {
+	float: left;
+	margin: 2% 2% 2% 0;
+}
+
+.footer {
+	font-size: 11px;
+}
+
+a:link {
+	color: rgb(51,153,51);
+}
+
+a:visited {
+	color: rgb(204,51,204);
+}
+
+a:hover {
+	color: rgb(0,153,255);
+}
+
+a:active {
+	color: rgb(0,153,255);
+}
+
+a:link, a:visited, a:hover, a:active {
+	text-decoration: underline;
+}
+
+.nav{
+    list-style:none;
+    text-align:center;
+	font-size: 18px;
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+
+.nav ul {
+    border:1px solid #ccc;
+    border-width:1px 0 1px 0;
+	display: inline-block;
+	width: 100%;
+}
+.nav li {
+    display: inline;
+}
+.nav a {
+    display: inline-block;
+	padding: 10px 10% 10px 10%;
+}
+
+.nav a:link, a:visited {
+	color: black;
+}
+
+.nav a:hover, a:active{
+	color: rgb(0,0,204);
+}
+
+body#index a#indexnav,
+body#music a#musicnav,
+body#research a#researchnav {
+	font-weight: bold;
+}

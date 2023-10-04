@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Collaborative dereverberation</title>
+<link href="personal website.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="research">
+<div class = "content_wrapper">
+
+<div>
+<h1> Collaborative dereverberation </h1>
+
+<p> <a href="http://homes.sice.indiana.edu/scwager/"> Sanna Wager</a> (Ph.D. candidate, Indiana University SoIC), <a href="http://minjekim.com/"> Minje Kim</a> (Indiana University ISE)</p>
+
+<h2> Overview </h2> 
+
+<p>
+
+This page contains sample audio results related to our collaborative-dereverberation <a href="images/colldr/collaborative_dereverberation_article.pdf"> paper</a>. 
+We extend the Nonnegative-Tensor-Tactorization (NTF) multi-channel dereverberation model proposed by [1]&mdash;where channel-specific speech dereveberation tasks are 
+linked by jointly estimating the speech source across channels&mdash;by using Nonnegative Matrix Factorization (NMF) along with sparsity and total variation regularization
+to add prior knowledge about dry speech to the source reconstruction. 
+
+</p>
+
+<p> 
+We ran the experiment on three different room types, with reverberation decay times (T60), respectively, of 0.6, 1.2, and 1.6 seconds. 
+Speech recordings with longer decay times are challenging cases for applications such as automatic speech recognition.  
+The input to the program consists of monophonic recordings of four sensors placed in different parts of the room. The output consists 
+of a single dry-signal estimate. This page presents example audio results for one source/sensor configuration per room along with the corresponding average STOI and SNR values. We show the results 
+of three different dereverberation models: the baseline (NTF) model [1] adapted to an objective function using
+KL-divergence instead of Euclidean distance, the NTF model we extended with an NMF speech prior, 
+and our proposed model of NTF with an NMF speech prior and regularization.
+</p>
+
+<table style="text-align:center">
+<tr>
+	<th colspan="2">T60</th>
+    <td>0.6 sec.</td>
+    <td>0.2 sec.</td>
+    <td>1.6 sec.</td>
+</tr>
+<tr>
+	<th rowspan="2">Input reverberant signals</th>
+    <td>SNR</td>
+    <td>-1.90</td>
+    <td>-2.19</td>
+    <td>-2.12</td>
+</tr>
+<tr>
+    <td>STOI</td>
+    <td>&nbsp;0.66</td>
+    <td>&nbsp;0.55</td>
+    <td>&nbsp;0.53</td>
+</tr>
+<tr>
+	<th rowspan="2">NTF baseline with KL-div</th>
+    <td>SNR</td>
+    <td>-2.03 (-0.13)</td>
+    <td>-1.93 (+0.26)</td>
+    <td>-1.82 (+0.30)</td>
+</tr>
+<tr>
+    <td>STOI</td>
+    <td>&nbsp;0.61 (-0.01)</td>
+    <td>&nbsp;0.61 (+0.06)</td>
+    <td>&nbsp;0.61 (+0.08)</td>
+</tr>
+<tr>
+	<th rowspan="2">NTF with speech prior</th>
+    <td>SNR</td>
+    <td>-1.79 (+0.11)</td>
+    <td>-1.85 (+0.34)</td>
+    <td>-1.65 (+0.47)</td>
+</tr>
+<tr>
+    <td>STOI</td>
+    <td>&nbsp;0.75 (+0.09)</td>
+    <td>&nbsp;0.69 (+0.14)</td>
+    <td>&nbsp;0.67 (+0.14)</td>
+</tr>
+<tr>
+	<th rowspan="2">NTF w/ speech prior and regularization</th>
+    <td>SNR</td>
+    <td>-1.57 (+0.33)</td>
+    <td>-1.74 (+0.45)</td>
+    <td>-1.64 (+0.48)</td>
+</tr>
+<tr>
+    <td>STOI</td>
+    <td>&nbsp;0.77 (+0.11)</td>
+    <td>&nbsp;0.72 (+0.17)</td>
+    <td>&nbsp;0.69 (+0.16)</td>
+</tr>
+</table>
+
+<h2> Input reverberant audio signals (four channels) </h2>
+
+<h3> T60 = 0.6 seconds </h3>
+<audio controls>
+	<source src = "images/colldr/rir1/sa1_1_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+</br>
+<audio controls>
+	<source src = "images/colldr/rir1/sa1_2_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+</br>
+<audio controls>
+	<source src = "images/colldr/rir1/sa1_3_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+</br>
+<audio controls>
+	<source src = "images/colldr/rir1/sa1_4_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+
+
+<h3> T60 = 1.2 seconds </h3>
+<audio controls>
+	<source src = "images/colldr/rir44/sa44_1_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+</br>
+<audio controls>
+	<source src = "images/colldr/rir44/sa44_2_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+</br>
+<audio controls>
+	<source src = "images/colldr/rir44/sa44_3_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+</br>
+<audio controls>
+	<source src = "images/colldr/rir44/sa44_4_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+
+
+
+<h3> T60 = 1.6 seconds </h3>
+<audio controls>
+	<source src = "images/colldr/rir84/sa84_1_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+</br>
+<audio controls>
+	<source src = "images/colldr/rir84/sa84_2_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+</br>
+<audio controls>
+	<source src = "images/colldr/rir84/sa84_3_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+</br>
+<audio controls>
+	<source src = "images/colldr/rir84/sa84_4_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+
+
+
+<h2> Reconstructions </h2>
+
+<h3> T60 = 0.6 seconds </h3>
+<p> Baseline KL-divergence NTF </p>
+<audio controls>
+	<source src = "images/colldr/reconstruction_wav_rir1/nonmf_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+<p> NTF with NMF only </p>
+<audio controls>
+	<source src = "images/colldr/reconstruction_wav_rir1/nmf_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+<p> NTF with regularized NMF </p>
+<audio controls>
+	<source src = "images/colldr/reconstruction_wav_rir1/nmfreg_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+
+
+<h3> T60 = 1.2 seconds </h3>
+<p> Baseline KL-divergence NTF </p>
+<audio controls>
+	<source src = "images/colldr/reconstruction_wav_rir44/nonmf_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+<p> NTF with NMF only </p>
+<audio controls>
+	<source src = "images/colldr/reconstruction_wav_rir44/nmf_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+<p> NTF with regularized NMF </p>
+<audio controls>
+	<source src = "images/colldr/reconstruction_wav_rir44/nmfreg_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+
+
+<h3> T60 = 1.6 seconds </h3>
+<p> Baseline KL-divergence NTF </p>
+<audio controls>
+	<source src = "images/colldr/reconstruction_wav_rir84/nonmf_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+<p> NTF with NMF only </p>
+<audio controls>
+	<source src = "images/colldr/reconstruction_wav_rir84/nmf_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+<p> NTF with regularized NMF </p>
+<audio controls>
+	<source src = "images/colldr/reconstruction_wav_rir84/nmfreg_norm.wav" type = "audio/wav" />
+    Your browser does not support this audio format.
+</audio>
+
+
+
+<p> [1] Mirsamadi, Seyedmahdad, and John HL Hansen. "Multichannel speech dereverberation 
+based on convolutive nonnegative tensor factorization for ASR applications." 
+Fifteenth Annual Conference of the International Speech Communication Association. 2014.</p>
+
+
+</div>
+</body>
+</html>
+
