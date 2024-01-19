@@ -69,6 +69,11 @@ div {
 	margin: 2% 2% 2% 0;
 }
 
+.responsive {
+  width: 40%;
+  height: auto;
+}
+
 .footer {
 	font-size: 11px;
 }
